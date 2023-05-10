@@ -7,12 +7,11 @@
     <h1><%= post.postTitle %> </h1>
     <% var truncatedBody=post.postBody.substring(0,100) %> 
     <% if(post.postBody.length>100){ %> 
-    <p style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis;"><%= truncatedBody +" ... "%><a href="/posts/<%= post._id %> ">Read More</a> </p>  
+   
+    <p style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis;"><%= truncatedBody +" ... "%><a href="/posts/<%= post._id %> ">Read More</a></p>
     <% }else{ %> 
-    <p style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis;"><%= truncatedBody+" " %><a href="/posts/<%= post._id %> ">Read More</a> </p>
+    <p style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis;"><%= truncatedBody+" "%> <a href="/posts/<%= post._id %> ">Read More</a></p>
     <% } %> 
 <%  });  %>
-
-
 
 <%- include('partials/footer') %> 
